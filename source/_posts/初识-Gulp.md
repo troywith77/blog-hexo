@@ -19,14 +19,16 @@ mkdir sys && cd sys
 项目的目录结构如下
 
 ``` javascript
-app/   //存放静态文件
+app/
+//存放静态文件
     components  /
     css/
     images/
     scripts/
     scss/
     index.html
-dist/  //存放编译后的文件
+dist/
+//存放编译后的文件
 node_modules/
 gulpfile.js
 package.json
@@ -35,7 +37,7 @@ package.json
 新建一个 `gulpfile.js` 文件，并编辑
 
 ``` javascript
-var gulp = require('gulp') 
+var gulp = require('gulp')
 //在项目中引入 gulp
 ```
 

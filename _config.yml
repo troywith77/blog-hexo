@@ -73,5 +73,6 @@ theme: apollo
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@gitcafe.com:troywith77/troywith77.git
-  branch: gitcafe-pages
+  # repository: git@gitcafe.com:troywith77/troywith77.git
+  repository: git@github.com:troywith77/troywith77.github.io.git
+  branch: master
