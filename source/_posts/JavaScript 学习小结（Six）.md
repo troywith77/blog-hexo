@@ -64,6 +64,9 @@ var x = 123;
 var y = new Number(123);
 (x === y) // is false because x is a number and y is an object.
 ```
+
+<!--more-->
+
 ## 字符串（String） 对象
 字符串可以使用单引号或双引号：
 
@@ -137,9 +140,10 @@ arr[2] = "Thomas";
 var arr2 = arr.join();
 typeof arr; // "object"
 typeof arr2;  // "string"
-``` 
+```
 
 ### 特殊字符
+
 Javascript 中可以使用反斜线（\）插入特殊符号，如：撇号,引号等其他特殊符号。
 
 代码 | 输出

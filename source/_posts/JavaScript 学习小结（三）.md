@@ -66,6 +66,9 @@ function myFunction(x, y) {     //更简单的形式
     y = y || 0;                 //定义了y时就返回y，没有定义时y为undefined，为false，返回0
 }
 ```
+
+<!--more-->
+
 ## JavaScript 函数调用
 JavaScript 函数有 4 种调用方式，每种方式的不同方式在于 this 的初始化。
 ### this 关键字

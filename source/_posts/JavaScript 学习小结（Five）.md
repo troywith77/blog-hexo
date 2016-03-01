@@ -44,6 +44,8 @@ var x=message.toUpperCase();   //HELLO WORLD!
 - 定义并创建对象的实例
 - 使用函数来定义对象，然后创建新的对象实例
 
+<!--more-->
+
 #### 创建直接的实例
 
 ```
