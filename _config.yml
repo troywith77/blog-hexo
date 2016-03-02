@@ -67,7 +67,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: apollo
+theme: rZen
 
 archive: 1
 
@@ -76,5 +76,6 @@ archive: 1
 deploy:
   type: git
   repository: git@gitcafe.com:troywith77/troywith77.git
-  # repository: git@github.com:troywith77/troywith77.github.io.git
   branch: gitcafe-pages
+  # repository: git@github.com:troywith77/troywith77.github.io.git
+  # branch: gh-pages

@@ -1,4 +1,4 @@
-title: JavaScript 学习小结（二）
+title: JavaScript 学习小结（Two）
 date: 2015-06-01 22:47:55
 tags:
 ---
@@ -15,7 +15,7 @@ throw 语句创建自定义错误。（创建或者抛出异常）
 function myFunction()
 {
 try
-  { 
+  {
   var x=document.getElementById("demo").value;
   if(x=="")    throw "empty";
   if(isNaN(x)) throw "not a number";
