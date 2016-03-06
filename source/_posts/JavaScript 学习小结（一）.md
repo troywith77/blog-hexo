@@ -6,7 +6,7 @@ tags:
 (不知道是不是我弄错了，感觉应该要可以改才对，或许有别的标签捏？)
 ```
 <h1>I love <em>JavaScript</em></h1>
-alert(document.getElementsByTagName("h1")[0].innerHTML) 
+alert(document.getElementsByTagName("h1")[0].innerHTML)
 //I love <em>JavaScript</em>
 ```
 - 使用childNodes.nodeValue来更改文本节点的值时需要先选择文本节点：
@@ -33,6 +33,9 @@ function what(){
 ```
 
 - 文档加载完成后再使用document.write整个文档会被覆盖（不建议使用）;
+
+<!--more-->
+
 - 数字 + 字符 会将数字转换成字符后连接起来;
 
 ```
@@ -115,14 +118,14 @@ default:
 ```
 
 - 数字使用 .toString( ) 方法需要添加括号； String()
- 
+
 <!--more-->
 
 ##### 将字符串转换为数字
 
 ```
 Number("3.14")    // 返回 3.14
-Number(" ")       // 返回 0 
+Number(" ")       // 返回 0
 Number("")        // 返回 0
 Number("99 88")   // 返回 NaN
 ```
@@ -148,6 +151,6 @@ getTime()|	返回 1970 年 1 月 1 日至今的毫秒数。
 ```
 5 + null    // 返回 5         because null is converted to 0
 "5" + null  // 返回"5null"   because null is converted to "null"
-"5" + 1     // 返回 "51"      because 1 is converted to "1"  
+"5" + 1     // 返回 "51"      because 1 is converted to "1"
 "5" - 1     // 返回 4         because "5" is converted to 5
 ```

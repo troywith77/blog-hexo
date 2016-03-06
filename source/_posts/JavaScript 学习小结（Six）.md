@@ -41,6 +41,9 @@ myNumber=myNumber*myNumber; // Calculate until Infinity
 var x = 2/0;
 var y = -2/0;
 ```
+
+<!--more-->
+
 ### NaN - (Not a number)非数字值
 NaN 属性是代表非数字值的特殊值。该属性用于指示某个值不是数字。可以把 Number 对象设置为该值，来指示其不是数字值。可以使用 isNaN() 全局函数来判断一个值是否是 NaN 值。
 
@@ -60,12 +63,11 @@ var y = new Number(123);
 typeof(x) // returns Number
 typeof(y) // returns Object
 
-var x = 123;              
+var x = 123;
 var y = new Number(123);
 (x === y) // is false because x is a number and y is an object.
 ```
 
-<!--more-->
 
 ## 字符串（String） 对象
 字符串可以使用单引号或双引号：
@@ -165,7 +167,7 @@ time;  //获得当前日期
 time.getFullYear(); //年
 time.getHours(); //时
 time.getMinutes(); //分
-time.getSeconds(); //秒 
+time.getSeconds(); //秒
 time.getMonth(); //月
 time.getDate();  //日
 ```
@@ -216,8 +218,8 @@ else
 
 ```
 //1: 常规方式:
-var myCars=new Array(); 
-myCars[0]="Saab";       
+var myCars=new Array();
+myCars[0]="Saab";
 myCars[1]="Volvo";
 myCars[2]="BMW";
 //2: 简洁方式:
