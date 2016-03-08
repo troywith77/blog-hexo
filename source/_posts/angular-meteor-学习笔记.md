@@ -47,7 +47,9 @@ Parties.update({_id: $stateParams.partyId}, {
 ```
 Error: A method named '/parties/insert' is already defined
 ```
+- `Meteor.users`是`meteor-accounts`定义的Collection
 - 返回所有查询到的数据但是只包括这两个字段
 ```
 return Meteor.users.find({}, {fields: {emails: 1, profile: 1}})
 ```
+- 在哪个directive里subscribe了数据，就只能在这个di里访问到
