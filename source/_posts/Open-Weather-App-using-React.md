@@ -8,7 +8,7 @@ tags:
 
 PS: 写这个React app的时候一会用ES5，一会用ES6也是醉了 | ｀Д´|
 
-## Step1 配置npm、webpack以及babel
+### Step1 配置npm、webpack以及babel
 `package.json`里面的部分关键配置，包括启动脚本以及依赖
 ```javascript
 "scripts": {
@@ -70,7 +70,7 @@ module.exports = {
 }
 ```
 
-## Step2 配置最基本的React Router
+### Step2 配置最基本的React Router
 
 在根目录创建一个app目录，里面存放我们开发时用的文件，转到生产环境后会build文件到dist目录，这个之后再讲。
 
