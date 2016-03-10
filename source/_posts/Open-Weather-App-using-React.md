@@ -39,12 +39,20 @@ PS: 写这个React app的时候一会用ES5，一会用ES6也是醉了 | ｀Д´
 ```
 这里是`webpack.config.js`的配置
 ```javascript
+/*
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',  //模板文件
   filename: 'index.html',  //文件名
   inject: 'body'  //script标签插入到body标签里
 })
+*/
+/*
+    之前用了html-webpack-plugin这个插件自动生成dist里面的index.html，
+    但是由于使用browserHistory需要引用script标签时用绝对引用，这个插件引入
+    的不是绝对引用，所以暂时这里自己在dist目录下新建一个index.html，
+    引入inde_bundle.js文件
+*/
 
 module.exports = {
   entry: [
