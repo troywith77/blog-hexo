@@ -261,6 +261,8 @@ import {convertTemp, convertDate} from '../helpers/utils'
 //API返回的温度是绝对温度，需要转换
 //返回的时间是UnixTimesMpa， 需要转换
 
+//数据具体怎么渲染要看API借口噢~
+
 function DayItem(props) {
   var date = convertDate(props.day.dt);  //转换后格式化的时间
   var icon = props.day.weather[0].icon;  
@@ -276,3 +278,8 @@ function DayItem(props) {
 
 module.exports = DayItem;
 ```
+现在App的预报界面应该是这样的（这里没有写CSS的操作哦）
+
+![post](/images/Open-Weather-App-using-Reac/forecast.png)
+
+到现在我们已经完成了一个具有简单查询功能的天气APP啦，接下来就再添加一个详情页面，使上面的每一天的预报都可以点击然后进入详情页面的路由~
