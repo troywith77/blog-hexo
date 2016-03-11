@@ -74,6 +74,9 @@ ForecastContainer.contextTypes = {
 
 module.exports = ForecastContainer
 ```
+
+<!--more-->
+
 在components文件夹里新建一个**Forecast**组件
 ```
 import DayItem from './DayItem'

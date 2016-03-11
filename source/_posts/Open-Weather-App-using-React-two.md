@@ -36,7 +36,9 @@ ReactDOM.render(routes, document.getElementById('app'))
 
 在config文件夹里面新建一个`routes.js`文件
 
-> 之后一些Component的引入就省略掉了，看到游泳Component的地方应该知道肯定要先引入才行的吧~ 必要的引入会提出来
+<!--more-->
+
+> 之后一些Component的引入就省略掉了，看到要用Component的地方应该知道肯定要先引入才行的吧~ 必要的引入会提出来
 
 ```
 import { Router, Route, browserHistory } from 'react-router'

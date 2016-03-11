@@ -38,6 +38,7 @@ export default class Detaul extends React.Component{
 }
 
 ```
+<!--more-->
 
 打开** DayItem.js **
 ```

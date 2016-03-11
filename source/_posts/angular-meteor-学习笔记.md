@@ -23,6 +23,7 @@ $locationProvider.html5Mode(true);
 <!-- HTML -->
 <base href="/">
 ```
+<!--more-->
 - ui.router三个最重要的Provider
 ```
 $stateParams.(:id)  //获取url里的参数

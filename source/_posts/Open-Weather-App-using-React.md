@@ -37,6 +37,7 @@ PS: 写这个React app的时候一会用ES5，一会用ES6也是醉了 | ｀Д´
     "webpack-dev-server": "^1.14.1"
   }
 ```
+<!--more-->
 这里是`webpack.config.js`的配置
 ```javascript
 /*

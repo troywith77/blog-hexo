@@ -42,6 +42,9 @@ var GetCityContainer = React.createClass({
   }
 })
 ```
+
+<!--more-->
+
 在components文件夹里新建一个** GetCity **文件
 ```
 class Input extends React.Component{
