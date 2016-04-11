@@ -81,4 +81,4 @@ deploy:
   # repository: git@git.coding.net:troywith77/Blog.git
   # branch: coding-pages
   repository: git@github.com:troywith77/troywith77.github.io.git
-  branch: gh-pages
+  branch: master
