@@ -1,18 +1,21 @@
-title: Open Weather App using React ( six )
+title: Open Weather App using React ( five )
 date: 2016-03-10 10:12:29
 tags:
 ---
-### Step6 配置生产环境服务器
+### Step5 配置生产环境服务器
 
 ** 最终Demo位置，** [看这里~](http://115.159.95.239:8080/)
 
-其实在step5的时候我们的app已经完成了，但是webpack-dev-server并不是一个production server，要把我们的app部署到真正的服务器上的话，我们需要一个production server，which is to say，配置一个Node服务器。
+其实在step4的时候我们的app已经完成了，但是webpack-dev-server并不是一个production server，要把我们的app部署到真正的服务器上的话，我们需要一个production server，which is to say，配置一个Node服务器。
 
 but，我只是简单的配置一下，毕竟我对node也不熟啊( ͡° ͜ʖ ͡°)
 
 `npm install --save express` 安装一下express
 
 然后我们到根目录下创建一个** server.js **文件
+
+<!-- more -->
+
 ```
 var express = require( 'express' );
 var path = require( 'path' );

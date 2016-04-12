@@ -1,4 +1,4 @@
-title: Open Weather App using React (One)
+title: Open Weather App using React ( Zero )
 date: 2016-03-09 18:04:46
 tags:
 ---
@@ -8,7 +8,7 @@ tags:
 
 PS: 写这个React app的时候一会用ES5，一会用ES6也是醉了 | ｀Д´|
 
-### Step1 配置npm、webpack以及babel
+### Step0 配置npm、webpack以及babel
 `package.json`里面的部分关键配置，包括启动脚本以及依赖
 ```javascript
 "scripts": {
@@ -37,8 +37,11 @@ PS: 写这个React app的时候一会用ES5，一会用ES6也是醉了 | ｀Д´
     "webpack-dev-server": "^1.14.1"
   }
 ```
+
 <!--more-->
+
 这里是`webpack.config.js`的配置
+
 ```javascript
 /*
 var HtmlWebpackPlugin = require('html-webpack-plugin')
