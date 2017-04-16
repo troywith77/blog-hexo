@@ -13,8 +13,8 @@ email: ruitang307@gmail.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.tangrui.win
-root: /
+url: http://www.tangrui.win/blog
+root: /blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -71,14 +71,11 @@ theme: zenT
 
 archive: 1
 
-post_asset_folder: false
-
-
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
   # repository: git@git.coding.net:troywith77/Blog.git
   # branch: coding-pages
-  repository: git@github.com:troywith77/troywith77.github.io.git
+  repository: git@github.com:troywith77/blog.git
   branch: master

@@ -1,9 +1,10 @@
 # Header
 menu:
-  Home: /
+  Home: /blog
   Archives: /archives
   Github: http://www.github.com/troywith77
-  About: http://tangrui.win/dove/resume/
+  About: http://tangrui.win/resume
+  Mail me: mailto:@ruitang307@gmail.com
 rss: /atom.xml
 
 # Content
@@ -13,5 +14,3 @@ fancybox: true
 # Miscellaneous
 google_analytics:
 favicon: /favicon.ico
-
-duoshuo_shortname: troywith77
