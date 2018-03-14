@@ -306,7 +306,7 @@ render() {
 
 现在首页的UI就完成了，但是还没有任何功能(⊙o⊙)哦！现在页面应该长这样~ (点击看大图~)
 
-![post](/images/Open-Weather-App-using-Reac/home.png)
+![post](/blog/images/Open-Weather-App-using-Reac/home.png)
 
 ### Step3 添加新的天气预报页面的路由
 首先在routes.js里添加一个新的路由
@@ -449,7 +449,7 @@ function DayItem(props) {
   //文件名和icon代码一样，方便引入
   return (
     <div onClick={props.handleClick}>
-      <img src={'/images/weather-icons/' + icon + '.svg'} />
+      <img src={'/blog/images/weather-icons/' + icon + '.svg'} />
       <h2>{date}</h2>
     </div>
   )
@@ -459,7 +459,7 @@ module.exports = DayItem;
 ```
 现在App的预报界面应该是这样的（这里没有写CSS的操作哦）
 
-![post](/images/Open-Weather-App-using-Reac/forecast.png)
+![post](/blog/images/Open-Weather-App-using-Reac/forecast.png)
 
 到现在我们已经完成了一个具有简单查询功能的天气APP啦，接下来就再添加一个详情页面，使上面的每一天的预报都可以点击然后进入详情页面的路由~
 
@@ -567,7 +567,7 @@ Finally，这个简单的App就基本完成了！！！( ﾟ▽ﾟ)/
 
 这个详情页的样子是这样~
 
-![post](/images/Open-Weather-App-using-Reac/detail.png)
+![post](/blog/images/Open-Weather-App-using-Reac/detail.png)
 
 ### Step5 配置生产环境服务器
 
@@ -591,7 +591,7 @@ var app = express()  //创建一个express实例
 
 app.use(express.static(path.join(__dirname, 'dist')))
 //使用dist目录作为静态文件根目录
-//所以我们可以使用/images/...的路径来获取我们的icon图标等等
+//所以我们可以使用/blog/images/...的路径来获取我们的icon图标等等
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'))
@@ -625,5 +625,5 @@ Biu~ 一个简单的生产环境服务器就配置完成了。
 
 [Github Repo](https://github.com/troywith77/react-weather)
 
-![post](/images/Open-Weather-App-using-Reac/end.png)
+![post](/blog/images/Open-Weather-App-using-Reac/end.png)
 
