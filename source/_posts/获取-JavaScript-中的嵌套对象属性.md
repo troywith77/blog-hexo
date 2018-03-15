@@ -68,9 +68,12 @@ const name = ((user || {}).info || {}).name;
 
 ```
 const safeGet = (obj, path) => (
+  // 检查obj是否为对象
+  // 检查path是否为数组
+  // 一系列check...
   path.reduce((obj, key) => (
     (obj && (typeof obj[key] !== 'undefined')) ? obj[key] : undefined
-  ), obj)
+  ), obj);
 )
 
 // 我们可以用 safeGet 函数来获取任意层次的嵌套对象了
@@ -80,11 +83,11 @@ const user = {
   email: 'troy@google.com'
 };
 
-safeGet(user, ['id']) // 100
-safeGet(user, ['email']) // 'troy@google.com'
-safeGet(user, ['info']) // undefined
-safeGet(user, ['info', 'name']) // undefined
-safeGet(user, ['info', 'name', 'fly', 'whatever']) // undefined
+safeGet(user, ['id']); // 100
+safeGet(user, ['email']); // 'troy@google.com'
+safeGet(user, ['info']); // undefined
+safeGet(user, ['info', 'name']); // undefined
+safeGet(user, ['info', 'name', 'fly', 'whatever']); // undefined
 
 // 我们同样能够用 safeGet 函数来获取嵌套对象里的数组元素
 
@@ -94,11 +97,35 @@ const anotherUser = {
   info: ['Living in USA', 'she is 18']
 };
 
-safeGet(anotherUser, ['info', 0]) // 'Living in USA'
-safeGet(user, ['info', 1]) // 'she is 18'
-safeGet(user, ['info', 2]) // undefined
+safeGet(anotherUser, ['info', 0]); // 'Living in USA'
+safeGet(user, ['info', 1]); // 'she is 18'
+safeGet(user, ['info', 2]); // undefined
 ```
 
 开源库比如 `lodash` 和 `underscore` 都提供了类似的方法，虽然这两个库都可以按需引入，不过自己写一个函数更轻量级更棒咯（笑哭）
 
 Happy safeGeting ~
+
+### update:
+
+```
+// 有人或许偏爱这种方式
+safeGet(user, 'info.name');
+// 只需要 path.split('.') 生成数组然后使用 reduce 就行了
+// 补充一个完整的 safeGet 函数
+
+const safeGet = (obj, targetPath) => {
+  let path;
+  if (Object.prototype.toString.call(obj) !== '[object Object]') throw Error('第一个参数不是对象');
+  if (Array.isArray(targetPath)) {
+    path = targetPath;
+  } else if (typeof targetPath === 'string') {
+    path = targetPath.split('.');
+  } else {
+    throw Error('第二个参数类型不正确，请确认传入的是一个数组或者字符串')
+  }
+  return path.reduce((obj, key) => (
+    (obj && (typeof obj[key] !== 'undefined')) ? obj[key] : undefined
+  ), obj);
+};
+```
