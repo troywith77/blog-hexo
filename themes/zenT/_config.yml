@@ -1,10 +1,10 @@
 # Header
 menu:
   Home: /blog
-  Archives: /archives
+  Archives: /blog/archives
   Github: http://www.github.com/troywith77
-  About: http://tangrui.win/resume
-  Mail me: mailto:@ruitang307@gmail.com
+  About: http://tangrui.win
+  Mail me: mailto:ruitang307@gmail.com
 rss: /atom.xml
 
 # Content
