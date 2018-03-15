@@ -9,7 +9,7 @@ JavaScript 是个很棒的语言，但是我们经常会碰到一些奇怪的场
 
 在使用 JavaScript 的时候，我们经常会需要到获取深层嵌套对象的里层元素，比如下面的例子：
 
-```
+```javascript
 const user = {
   id: 77,
   email: 'ruitang307@gmail.com',
@@ -25,7 +25,7 @@ const user = {
 
 为了获取用户的 `name` 或者 `city` ，我们会写到
 
-```
+```javascript
 const userName = user.info.name;
 
 const userCity = user.info.address.city;
@@ -37,7 +37,7 @@ const userCity = user.info.address.city;
 
 <!--more-->
 
-```
+```javascript
 const user = {
   id: 100,
   email: 'troy@google.com'
@@ -46,7 +46,7 @@ const user = {
 
 现在如果你仍然像之前获取 `name` ，你将会被抛出一个错误 `Cannot read property 'name' of undefined`，这是因为我们在试图从一个不存在的对象里获取 `name` 这个 key。常规的解决办法是：
 
-```
+```javascript
 const name = (user && user.info) ? user.info.name : undefined;
 // or
 const name = user && user.info && user.info.name
@@ -56,7 +56,7 @@ const name = user && user.info && user.info.name
 
 我有几个小技巧可以让你的代码看起来干净并且简洁，第一种是像下面这样：
 
-```
+```javascript
 const name = ((user || {}).info || {}).name;
 ```
 
@@ -66,7 +66,7 @@ const name = ((user || {}).info || {}).name;
 
 所以更好的办法是写一个 `safeGet` 函数来更好的handle这种问题，我们可以用 `Array.reduce` 来完成这个函数，`Array.reduce` 非常强大，以后可以专门写一篇文章来介绍它。
 
-```
+```javascript
 const safeGet = (obj, path) => (
   // 检查obj是否为对象
   // 检查path是否为数组
@@ -106,17 +106,16 @@ safeGet(user, ['info', 2]); // undefined
 
 Happy safeGeting ~
 
-### update:
+## UPDATE
 
-```
-// 有人或许偏爱这种方式
-safeGet(user, 'info.name');
-// 只需要 path.split('.') 生成数组然后使用 reduce 就行了
-// 补充一个完整的 safeGet 函数
+有人或许偏爱这种方式，`safeGet(user, 'info.name');`，只需要 `path.split('.')` 生成数组然后使用 `reduce` 就行了，下面补充一个完整的 `safeGet` 函数
 
+```javascript
 const safeGet = (obj, targetPath) => {
   let path;
-  if (Object.prototype.toString.call(obj) !== '[object Object]') throw Error('第一个参数不是对象');
+  if (Object.prototype.toString.call(obj) !== '[object Object]') {
+    throw Error('第一个参数不是对象');
+  }
   if (Array.isArray(targetPath)) {
     path = targetPath;
   } else if (typeof targetPath === 'string') {
