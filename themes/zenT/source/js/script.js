@@ -110,4 +110,10 @@
     $(".nav").toggleClass("active")
   });
 
+  $(document).click(function(e) {
+    if (!$(e.target).is('.icon-reorder')) {
+      $(".nav").removeClass("active")
+    }
+  });
+
 })(jQuery);
