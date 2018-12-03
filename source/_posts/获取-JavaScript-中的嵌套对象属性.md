@@ -54,13 +54,13 @@ const name = user && user.info && user.info.name
 
 如果你的嵌套结构很简单，这样写是完全ok的。但是如果你的嵌套有5层6层甚至更深你还这样写的话，你的代码绝对会变得非常混乱而且难看。
 
-我有几个小技巧可以让你的代码看起来干净并且简洁，第一种是像下面这样：
+有几个小技巧可以让你的代码看起来即干净又简洁，第一种是像下面这样：
 
 ```javascript
 const name = ((user || {}).info || {}).name;
 ```
 
-虽然这看起来很 tricky，但它确实解决了问题，cheers ~ 用这个方法，你将不会再碰到 `Cannot read property 'name' of undefined` 了。这样纯粹只是先check了一下获取的对象是否存在，如果不存在的话就创建一个空对象，这样的话，每一层的key对应的value都能从一个存在的对象或者一个空对象里取到了，永远不会 `undefined`。
+虽然这看起来很 tricky，但它确实解决了问题，cheers~ 用这个方法，你将不会再碰到 `Cannot read property 'name' of undefined` 了。这样纯粹只是先check了一下获取的对象是否存在，如果不存在的话就创建一个空对象，这样的话，每一层的key对应的value都能从一个存在的对象或者一个空对象里取到了，永远不会 `undefined`。
 
 如果嵌套的都是 object ，这个方法很棒，但是如果嵌套的结构里存在 array ，那这个方法就很鸡肋了。。
 
