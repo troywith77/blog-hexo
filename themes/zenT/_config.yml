@@ -3,9 +3,9 @@ menu:
   Home: /blog
   Archives: /blog/archives
   Github: http://www.github.com/troywith77
-  About: http://tangrui.win
+  # About: http://tangrui.win
   Mail me: mailto:ruitang307@gmail.com
-rss: /atom.xml
+# rss: /atom.xml
 
 # Content
 excerpt_link: Read More
@@ -13,4 +13,4 @@ fancybox: true
 
 # Miscellaneous
 google_analytics:
-favicon: //7xjr92.com1.z0.glb.clouddn.com/images/favicon.ico
+# favicon: //7xjr92.com1.z0.glb.clouddn.com/images/favicon.ico
